@@ -243,6 +243,7 @@ call iscc /Qp "$(SolutionDir)\Installers\BorderlessGaming_Standalone_Admin.iss"
 call "$(SolutionDir)Tools\DigiCertUtil.exe" sign /noInput /sha1 "CB509F61A8A3B970790F0E2C695A3782F101FF22" "$(SolutionDir)Installers\BorderlessGaming@(VersionNumber)_admin_setup.exe"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>copy $(SolutionDir)SteamLibs\* $(ProjectDir)$(OutDir)</PreBuildEvent>
+    <PreBuildEvent>copy $(SolutionDir)SteamLibs\* $(ProjectDir)$(OutDir)
+copy $(SolutionDir)Languages\Languages.zip $(ProjectDir)$(OutDir)</PreBuildEvent>
   </PropertyGroup>
 </Project>
